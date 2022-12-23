@@ -1,0 +1,13 @@
+--
+- hosts: all
+  gather_facts: no
+  become: true
+  tasks:
+   - name: Create the file
+     file:
+      path: /tmp/mithuntechno.txt
+      owner: root
+      group: root
+      mode: 0777
+      state: touch
+...
