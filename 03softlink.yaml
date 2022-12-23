@@ -1,0 +1,10 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:  
+   - name: Create a softlink
+     file:
+       src: /tmp/mithuntechno.txt
+       dest: /tmp/mithuntechnosoft.txt
+       state: link
+...       
