@@ -1,0 +1,18 @@
+---
+- hosts: all
+  become: true
+  gather_facts: no
+  tasks:
+  - name: Install Apache HTTP Server
+    yum:
+     name: httpd
+     state: present
+  - name: Enable httpd service
+    systemd:
+      name: httpd
+      enabled: true  
+  - name: Start the Apache HTTP Server
+    service:
+     name: httpd
+     state: started   
+...    
