@@ -1,5 +1,5 @@
 ---
-- hosts: tomcatservers
+- hosts: 172.31.90.120
   become: true
   tasks:
     - name: Install Java
@@ -54,7 +54,7 @@
           User = tomcat
           Group = tomcat
           Type = oneshot
-          PIDFile =/usr/local/apache-tomcat-9.0.70/tomcat.pid
+          PIDFile =/usr/local/apache-tomcat-9.0.80/tomcat.pid
           RemainAfterExit = yes
           ExecStart =/usr/local/apache-tomcat-9.0.80/bin/startup.sh
           ExecStop =/usr/local/apache-tomcat-9.0.80/bin/shutdown.sh
